@@ -1,0 +1,56 @@
+{
+  "total_scenarios_evaluated": 20,
+  "ground_truth_matches": 20,
+  "verification_accuracy_pct": 100.0,
+  "category_breakdown": {
+    "STRAIGHTFORWARD": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "STATUTORY_EXCEPTION": {
+      "total": 4,
+      "correct": 4,
+      "accuracy_pct": 100.0
+    },
+    "PROVISO_OVERRIDE": {
+      "total": 4,
+      "correct": 4,
+      "accuracy_pct": 100.0
+    },
+    "MISSING_FACTS": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "CONTRADICTORY_FACTS": {
+      "total": 2,
+      "correct": 2,
+      "accuracy_pct": 100.0
+    },
+    "MULTI_PROVISION": {
+      "total": 3,
+      "correct": 3,
+      "accuracy_pct": 100.0
+    },
+    "UNSUPPORTED_CONCLUSION": {
+      "total": 1,
+      "correct": 1,
+      "accuracy_pct": 100.0
+    }
+  },
+  "verdict_distribution": {
+    "SUPPORTED": 10,
+    "MITIGATED_DEFENCE_APPLIED": 4,
+    "INSUFFICIENT_INFORMATION": 3,
+    "CONFLICTING": 1,
+    "CONTRADICTED": 2
+  },
+  "failed_scenarios": [],
+  "sanction_checks": {
+    "scenarios_with_expected_punishment": 10,
+    "expected_punishment_derived": 10
+  },
+  "fact_warnings": 0,
+  "all_passed": true
+}

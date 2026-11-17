@@ -1,0 +1,380 @@
+{
+  "Person": {
+    "name": "Person",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Entity x is a legal person under BNS Sec 2(26)"
+  },
+  "GroupOfPersons": {
+    "name": "GroupOfPersons",
+    "arity": 1,
+    "arg_types": [
+      "Any"
+    ],
+    "category": "STATUS",
+    "description": "Entity g is a group of persons"
+  },
+  "MemberOfGroup": {
+    "name": "MemberOfGroup",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Any"
+    ],
+    "category": "STATUS",
+    "description": "Person x is a member of group g"
+  },
+  "CausesDeath": {
+    "name": "CausesDeath",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x causes the death of person y"
+  },
+  "IntentionToCauseDeath": {
+    "name": "IntentionToCauseDeath",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "MENS_REA",
+    "description": "Person x acts with intention of causing death of y (Sec 101 cl a)"
+  },
+  "IntentionToCauseBodilyInjury": {
+    "name": "IntentionToCauseBodilyInjury",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "MENS_REA",
+    "description": "Person x acts with intention of causing bodily injury to y"
+  },
+  "KnowsInjuryLikelyToCauseDeath": {
+    "name": "KnowsInjuryLikelyToCauseDeath",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "MENS_REA",
+    "description": "Offender knows injury is likely to cause death of person harmed (Sec 101 cl b)"
+  },
+  "BodilyInjurySufficientInOrdinaryCourse": {
+    "name": "BodilyInjurySufficientInOrdinaryCourse",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Injury intended to be inflicted is sufficient in ordinary course of nature to cause death (Sec 101 cl c)"
+  },
+  "ImminentlyDangerousAct": {
+    "name": "ImminentlyDangerousAct",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x commits an act that is so imminently dangerous that it must in all probability cause death (Sec 101 cl d)"
+  },
+  "KnowledgeOfProbabilityOfDeath": {
+    "name": "KnowledgeOfProbabilityOfDeath",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "MENS_REA",
+    "description": "Person x knows act must in all probability cause death (Sec 101 cl d)"
+  },
+  "WithoutLawfulExcuse": {
+    "name": "WithoutLawfulExcuse",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x acts without any lawful excuse for incurring the risk of death (Sec 101 cl d)"
+  },
+  "GraveAndSuddenProvocation": {
+    "name": "GraveAndSuddenProvocation",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Person y gives grave and sudden provocation to person x (Sec 101 Exc 1)"
+  },
+  "DeprivedOfSelfControl": {
+    "name": "DeprivedOfSelfControl",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Offender x is deprived of the power of self-control by provocation (Sec 101 Exc 1)"
+  },
+  "ProvocationVoluntarilySought": {
+    "name": "ProvocationVoluntarilySought",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "PROVISO",
+    "description": "Provocation was sought or voluntarily provoked by offender as an excuse (Sec 101 Exc 1 Prov a)"
+  },
+  "ProvocationByLawfulPublicServant": {
+    "name": "ProvocationByLawfulPublicServant",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "PROVISO",
+    "description": "Provocation was given in obedience to law or by a public servant in lawful exercise of power (Sec 101 Exc 1 Prov b)"
+  },
+  "ProvocationByLawfulPrivateDefence": {
+    "name": "ProvocationByLawfulPrivateDefence",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "PROVISO",
+    "description": "Provocation was given by anything done in lawful exercise of right of private defence (Sec 101 Exc 1 Prov c)"
+  },
+  "ExceedsPrivateDefenceInGoodFaith": {
+    "name": "ExceedsPrivateDefenceInGoodFaith",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Offender x in good faith exercise of private defence exceeds lawful power (Sec 101 Exc 2)"
+  },
+  "WithoutPremeditation": {
+    "name": "WithoutPremeditation",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Offender x acts without premeditation (Sec 101 Exc 2, 4)"
+  },
+  "WithoutIntentionOfMoreHarmThanNecessary": {
+    "name": "WithoutIntentionOfMoreHarmThanNecessary",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Offender x has no intention of doing more harm than is necessary for defence (Sec 101 Exc 2)"
+  },
+  "PublicServantAdvancingJustice": {
+    "name": "PublicServantAdvancingJustice",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Public servant or person aiding public servant acting in good faith belief of lawful duty (Sec 101 Exc 3)"
+  },
+  "SuddenFightUponSuddenQuarrel": {
+    "name": "SuddenFightUponSuddenQuarrel",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Offence committed in sudden fight in heat of passion upon sudden quarrel (Sec 101 Exc 4)"
+  },
+  "TookUndueAdvantageOrActedCruelly": {
+    "name": "TookUndueAdvantageOrActedCruelly",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "PROVISO",
+    "description": "Offender x took undue advantage or acted in a cruel or unusual manner (Sec 101 Exc 4)"
+  },
+  "VictimAboveAge18": {
+    "name": "VictimAboveAge18",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Victim y is above eighteen years of age (Sec 101 Exc 5)"
+  },
+  "VictimConsentsToRiskOfDeath": {
+    "name": "VictimConsentsToRiskOfDeath",
+    "arity": 1,
+    "arg_types": [
+      "Person"
+    ],
+    "category": "EXCEPTION",
+    "description": "Victim y suffers death or takes the risk of death with own consent (Sec 101 Exc 5)"
+  },
+  "PrimaFacieMurder": {
+    "name": "PrimaFacieMurder",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Actus reus and mens rea of murder are prima facie satisfied"
+  },
+  "ExceptedFromMurder": {
+    "name": "ExceptedFromMurder",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "A statutory exception to murder applies under Section 101"
+  },
+  "Murder": {
+    "name": "Murder",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Person x is legally liable for the offence of murder of y under Section 101"
+  },
+  "CulpableHomicideNotAmountingToMurder": {
+    "name": "CulpableHomicideNotAmountingToMurder",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Act constitutes culpable homicide not amounting to murder"
+  },
+  "ActingInConcertOnDiscriminatoryGround": {
+    "name": "ActingInConcertOnDiscriminatoryGround",
+    "arity": 3,
+    "arg_types": [
+      "Any",
+      "Person",
+      "DiscriminatoryGround"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Group g of 5 or more commits murder of y on discriminatory ground (Sec 103 ss 2)"
+  },
+  "LiableToPunishment": {
+    "name": "LiableToPunishment",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Penalty"
+    ],
+    "category": "PUNISHMENT",
+    "description": "Person x is liable to statutory penal sanction"
+  },
+  "Deceives": {
+    "name": "Deceives",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x deceives person y (Sec 318 ss 1)"
+  },
+  "DishonestlyConcealsFact": {
+    "name": "DishonestlyConcealsFact",
+    "arity": 3,
+    "arg_types": [
+      "Person",
+      "Person",
+      "Any"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x dishonestly conceals fact f from person y (Sec 318 Expl)"
+  },
+  "FraudulentlyOrDishonestlyInducesDelivery": {
+    "name": "FraudulentlyOrDishonestlyInducesDelivery",
+    "arity": 3,
+    "arg_types": [
+      "Person",
+      "Person",
+      "Property"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x fraudulently or dishonestly induces y to deliver property p (Sec 318 ss 1)"
+  },
+  "IntentionallyInducesHarmfulActOrOmission": {
+    "name": "IntentionallyInducesHarmfulActOrOmission",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Person x intentionally induces y to do/omit act causing harm in body, mind, reputation or property (Sec 318 ss 1)"
+  },
+  "Cheats": {
+    "name": "Cheats",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Person x commits the offence of cheating against person y under Section 318"
+  },
+  "BoundByLawOrContractToProtectInterest": {
+    "name": "BoundByLawOrContractToProtectInterest",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Offender x was bound by law or contract to protect interest of person y (Sec 318 ss 3)"
+  },
+  "KnowsLikelyToCauseWrongfulLossToProtectedPerson": {
+    "name": "KnowsLikelyToCauseWrongfulLossToProtectedPerson",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "MENS_REA",
+    "description": "Offender knows act is likely to cause wrongful loss to protected person (Sec 318 ss 3)"
+  },
+  "BreachOfContract": {
+    "name": "BreachOfContract",
+    "arity": 2,
+    "arg_types": [
+      "Person",
+      "Person"
+    ],
+    "category": "STATUS",
+    "description": "Person x failed to perform a contractual promise owed to y (a civil wrong; relevant to Sec 318 Illus. g)"
+  },
+  "InducesDeliveryOfPropertyOrValuableSecurity": {
+    "name": "InducesDeliveryOfPropertyOrValuableSecurity",
+    "arity": 3,
+    "arg_types": [
+      "Person",
+      "Person",
+      "Property"
+    ],
+    "category": "ACTUS_REUS",
+    "description": "Offender dishonestly induces delivery of property or valuable security (Sec 318 ss 4)"
+  }
+}

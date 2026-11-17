@@ -1,0 +1,36 @@
+{
+  "total_sections_processed": 358,
+  "syntactically_validated_sections": 358,
+  "zero_warning_sections": 358,
+  "validation_pass_rate_pct": 100.0,
+  "mean_coverage_ratio_pct": 99.9,
+  "min_coverage_ratio_pct": 96.53,
+  "total_components": 1301,
+  "total_relationships": 1355,
+  "component_distribution": {
+    "CLAUSE": 281,
+    "PUNISHMENT": 265,
+    "ILLUSTRATION": 219,
+    "SUBSECTION": 179,
+    "MAIN_PROVISION": 134,
+    "EXPLANATION": 117,
+    "SUBCLAUSE": 43,
+    "PROVISO": 27,
+    "EXCEPTION": 26,
+    "DEFINITION": 10
+  },
+  "relationship_distribution": {
+    "HAS_CHILD": 764,
+    "PROVIDES_ILLUSTRATION_FOR": 219,
+    "QUALIFIES": 144,
+    "PUNISHES": 122,
+    "CROSS_REFERENCES": 80,
+    "EXCEPTION_TO": 26
+  },
+  "files": {
+    "knowledge_base_jsonl": "D:\\IIITB\\Classwork\\sem6\\Machine_Reasoning\\MR_Project_final\\MR Project\\data\\output\\knowledge_base.jsonl",
+    "review_components_csv": "D:\\IIITB\\Classwork\\sem6\\Machine_Reasoning\\MR_Project_final\\MR Project\\data\\output\\review_components.csv",
+    "review_relationships_csv": "D:\\IIITB\\Classwork\\sem6\\Machine_Reasoning\\MR_Project_final\\MR Project\\data\\output\\review_relationships.csv",
+    "validation_summary_json": "D:\\IIITB\\Classwork\\sem6\\Machine_Reasoning\\MR_Project_final\\MR Project\\data\\output\\validation_summary.json"
+  }
+}

@@ -1,0 +1,2485 @@
+{
+  "model": "gpt-4o",
+  "scenarios": 20,
+  "modes": {
+    "baseline": {
+      "mode": "baseline",
+      "scenarios": 20,
+      "mean_precision": 0.847,
+      "mean_recall": 0.778,
+      "mean_f1": 0.798,
+      "end_to_end_correct": 10,
+      "end_to_end_accuracy_pct": 50.0,
+      "unsafe_supported": 0,
+      "rejected_proposals": 0,
+      "llm_calls": 20,
+      "records": [
+        {
+          "scenario_id": "SCEN-BNS-001",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)",
+            "WithoutLawfulExcuse(A)",
+            "~GraveAndSuddenProvocation(B, A)",
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~WithoutPremeditation(A)",
+            "~WithoutIntentionOfMoreHarmThanNecessary(A)",
+            "~PublicServantAdvancingJustice(A)",
+            "~SuddenFightUponSuddenQuarrel(A, B)",
+            "~TookUndueAdvantageOrActedCruelly(A)",
+            "~VictimConsentsToRiskOfDeath(B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.462,
+          "recall": 1.0,
+          "f1": 0.632,
+          "missed": [],
+          "extra": [
+            "WithoutLawfulExcuse(A)",
+            "~PublicServantAdvancingJustice(A)",
+            "~SuddenFightUponSuddenQuarrel(A, B)",
+            "~TookUndueAdvantageOrActedCruelly(A)",
+            "~VictimConsentsToRiskOfDeath(B)",
+            "~WithoutIntentionOfMoreHarmThanNecessary(A)",
+            "~WithoutPremeditation(A)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-002",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "KnowsInjuryLikelyToCauseDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.714,
+          "f1": 0.833,
+          "missed": [
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~GraveAndSuddenProvocation(B, A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-003",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash50000)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Money50000)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash50000)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-004",
+          "extracted": [
+            "Person(X)",
+            "Person(Y)",
+            "GraveAndSuddenProvocation(Y, X)",
+            "DeprivedOfSelfControl(X)",
+            "CausesDeath(X, Y)",
+            "~ProvocationVoluntarilySought(X)",
+            "~ProvocationByLawfulPublicServant(Y)",
+            "~ProvocationByLawfulPrivateDefence(Y)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.889,
+          "f1": 0.941,
+          "missed": [
+            "IntentionToCauseDeath(X, Y)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-005",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "ExceedsPrivateDefenceInGoodFaith(A)",
+            "WithoutPremeditation(A)",
+            "WithoutIntentionOfMoreHarmThanNecessary(A)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-006",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "WithoutPremeditation(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)",
+            "~TookUndueAdvantageOrActedCruelly(A)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "missed": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-007",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "VictimAboveAge18(B)",
+            "VictimConsentsToRiskOfDeath(B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.833,
+          "f1": 0.909,
+          "missed": [
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-008",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationVoluntarilySought(A)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.857,
+          "recall": 0.857,
+          "f1": 0.857,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)"
+          ],
+          "extra": [
+            "GraveAndSuddenProvocation(A, Z)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-009",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseBodilyInjury(A, Z)",
+            "BodilyInjurySufficientInOrdinaryCourse(A, Z)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationByLawfulPublicServant(Z)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.625,
+          "recall": 0.714,
+          "f1": 0.667,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)",
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, Z)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "IntentionToCauseBodilyInjury(A, Z)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-010",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseBodilyInjury(A, Z)",
+            "WithoutLawfulExcuse(A)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationByLawfulPrivateDefence(Z)",
+            "VictimAboveAge18(Z)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.556,
+          "recall": 0.714,
+          "f1": 0.625,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)",
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [
+            "GraveAndSuddenProvocation(A, Z)",
+            "IntentionToCauseBodilyInjury(A, Z)",
+            "VictimAboveAge18(Z)",
+            "WithoutLawfulExcuse(A)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-011",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "TookUndueAdvantageOrActedCruelly(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.714,
+          "f1": 0.833,
+          "missed": [
+            "IntentionToCauseDeath(A, B)",
+            "WithoutPremeditation(A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-012",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-013",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "VictimConsentsToRiskOfDeath(Z)",
+            "~VictimAboveAge18(Z)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [
+            "~VictimAboveAge18(Z)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "CONTRADICTED",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-014",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-015",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "~IntentionToCauseDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1": 0.75,
+          "missed": [
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONFLICTING",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-016",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "~WithoutPremeditation(A)",
+            "~SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.8,
+          "recall": 0.667,
+          "f1": 0.727,
+          "missed": [
+            "IntentionToCauseDeath(A, B)",
+            "SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "extra": [
+            "~SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "CONTRADICTED",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-017",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, ShareCertificates)",
+            "InducesDeliveryOfPropertyOrValuableSecurity(A, B, ShareCertificates)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-018",
+          "extracted": [
+            "GroupOfPersons(G)",
+            "MemberOfGroup(A, G)",
+            "CausesDeath(A, B)",
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.667,
+          "missed": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, Religion)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-019",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "DishonestlyConcealsFact(A, Z, PriorSaleToB)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Property)",
+            "InducesDeliveryOfPropertyOrValuableSecurity(A, Z, Property)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Money50Lakh)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Property)",
+            "InducesDeliveryOfPropertyOrValuableSecurity(A, Z, Property)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-020",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "BreachOfContract(A, Z)"
+          ],
+          "rejected": [],
+          "evidence": {},
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "missed": [
+            "~Deceives(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        }
+      ]
+    },
+    "grounded": {
+      "mode": "grounded",
+      "scenarios": 20,
+      "mean_precision": 0.897,
+      "mean_recall": 0.798,
+      "mean_f1": 0.84,
+      "end_to_end_correct": 12,
+      "end_to_end_accuracy_pct": 60.0,
+      "unsafe_supported": 1,
+      "rejected_proposals": 3,
+      "llm_calls": 20,
+      "records": [
+        {
+          "scenario_id": "SCEN-BNS-001",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)",
+            "~WithoutLawfulExcuse(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A purchased potassium cyanide",
+            "Person(B)": "mixed it into B's morning drink",
+            "CausesDeath(A, B)": "B drank the mixture and died within minutes as a direct consequence of the poison",
+            "IntentionToCauseDeath(A, B)": "with the direct intention of causing B's death",
+            "~WithoutLawfulExcuse(A)": "No defensive violence, provocation, or excuse existed"
+          },
+          "precision": 0.8,
+          "recall": 0.667,
+          "f1": 0.727,
+          "missed": [
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~GraveAndSuddenProvocation(B, A)"
+          ],
+          "extra": [
+            "~WithoutLawfulExcuse(A)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-002",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "KnowsInjuryLikelyToCauseDeath(A, B)",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A knew that B suffered from a severely diseased and enlarged spleen",
+            "Person(B)": "A knew that B suffered from a severely diseased and enlarged spleen",
+            "CausesDeath(A, B)": "B died of splenic rupture",
+            "IntentionToCauseBodilyInjury(A, B)": "A intentionally struck B in the abdomen with a wooden staff intending to inflict bodily harm",
+            "KnowsInjuryLikelyToCauseDeath(A, B)": "A knew that B suffered from a severely diseased and enlarged spleen such that any blunt trauma to B's abdomen was likely to rupture the spleen and cause death",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)": "A knew that B suffered from a severely diseased and enlarged spleen such that any blunt trauma to B's abdomen was likely to rupture the spleen and cause death"
+          },
+          "precision": 0.833,
+          "recall": 0.714,
+          "f1": 0.769,
+          "missed": [
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~GraveAndSuddenProvocation(B, A)"
+          ],
+          "extra": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-003",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A falsely represented himself",
+            "Person(B)": "deceived B into believing",
+            "Deceives(A, B)": "intentionally deceived B into believing",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash)": "B handed over ₹50,000 in cash to A, which A pocketed for personal use",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)": "intentionally deceived B into believing that B owed overdue property tax fines"
+          },
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Money50000)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-004",
+          "extracted": [
+            "Person(X)",
+            "Person(Y)",
+            "CausesDeath(X, Y)",
+            "IntentionToCauseDeath(X, Y)",
+            "GraveAndSuddenProvocation(Y, X)",
+            "DeprivedOfSelfControl(X)",
+            "~ProvocationVoluntarilySought(X)",
+            "~ProvocationByLawfulPublicServant(Y)",
+            "~ProvocationByLawfulPrivateDefence(Y)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(X)": "X picked up a heavy tool and struck Y",
+            "Person(Y)": "Y unexpectedly hurled grave insults",
+            "CausesDeath(X, Y)": "X picked up a heavy tool and struck Y, causing fatal injuries",
+            "IntentionToCauseDeath(X, Y)": "X picked up a heavy tool and struck Y, causing fatal injuries",
+            "GraveAndSuddenProvocation(Y, X)": "Y unexpectedly hurled grave insults, spat in X's face, and violently assaulted X's young child without prior warning",
+            "DeprivedOfSelfControl(X)": "Deprived of self-control by this sudden passion",
+            "~ProvocationVoluntarilySought(X)": "The provocation was not sought by X",
+            "~ProvocationByLawfulPublicServant(Y)": "not done by a public servant",
+            "~ProvocationByLawfulPrivateDefence(Y)": "not done in private defence"
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "MITIGATED_DEFENCE_APPLIED",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-005",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "ExceedsPrivateDefenceInGoodFaith(A)",
+            "WithoutPremeditation(A)",
+            "WithoutIntentionOfMoreHarmThanNecessary(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A defended himself with a pocket knife.",
+            "Person(Z)": "Z ambushed A with an iron club.",
+            "CausesDeath(A, Z)": "A struck Z fatally.",
+            "ExceedsPrivateDefenceInGoodFaith(A)": "A struck Z fatally, exceeding the strict proportion of harm authorized by law, but without intention of doing more harm than he believed necessary for his defense.",
+            "WithoutPremeditation(A)": "acting without premeditation",
+            "WithoutIntentionOfMoreHarmThanNecessary(A)": "without intention of doing more harm than he believed necessary for his defense."
+          },
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-006",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "WithoutPremeditation(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)",
+            "~TookUndueAdvantageOrActedCruelly(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A sudden verbal dispute erupted between A and B",
+            "Person(B)": "A sudden verbal dispute erupted between A and B",
+            "CausesDeath(A, B)": "A struck B with a stone, causing fatal head injury",
+            "WithoutPremeditation(A)": "without prior premeditation",
+            "SuddenFightUponSuddenQuarrel(A, B)": "Both men began fighting in the heat of passion upon a sudden quarrel",
+            "~TookUndueAdvantageOrActedCruelly(A)": "A did not take undue advantage or act in a cruel or unusual manner"
+          },
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "missed": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-007",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "VictimAboveAge18(B)",
+            "VictimConsentsToRiskOfDeath(B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A administered the fatal dose requested by B.",
+            "Person(B)": "B, a competent adult aged 28 suffering from incurable agony,",
+            "CausesDeath(A, B)": "A administered the fatal dose requested by B.",
+            "VictimAboveAge18(B)": "B, a competent adult aged 28 suffering from incurable agony,",
+            "VictimConsentsToRiskOfDeath(B)": "B took the risk of death with his own informed consent."
+          },
+          "precision": 1.0,
+          "recall": 0.833,
+          "f1": 0.909,
+          "missed": [
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-008",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationVoluntarilySought(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A nurtured a long-standing desire to kill Z.",
+            "Person(Z)": "A nurtured a long-standing desire to kill Z.",
+            "CausesDeath(A, Z)": "A immediately drew a concealed pistol and shot Z dead.",
+            "IntentionToCauseDeath(A, Z)": "A nurtured a long-standing desire to kill Z.",
+            "GraveAndSuddenProvocation(A, Z)": "A went to Z's residence and deliberately hurled vulgar insults to provoke Z into striking him.",
+            "DeprivedOfSelfControl(A)": "A immediately drew a concealed pistol and shot Z dead, claiming sudden provocation.",
+            "ProvocationVoluntarilySought(A)": "A went to Z's residence and deliberately hurled vulgar insults to provoke Z into striking him."
+          },
+          "precision": 0.857,
+          "recall": 0.857,
+          "f1": 0.857,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)"
+          ],
+          "extra": [
+            "GraveAndSuddenProvocation(A, Z)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-009",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(Z, A)",
+            "ProvocationByLawfulPublicServant(Z)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A became enraged by the arrest",
+            "Person(Z)": "Z, a police officer",
+            "CausesDeath(A, Z)": "struck Officer Z with a lethal weapon, killing him",
+            "IntentionToCauseDeath(A, Z)": "struck Officer Z with a lethal weapon, killing him",
+            "GraveAndSuddenProvocation(Z, A)": "A became enraged by the arrest, claimed his dignity was violated",
+            "ProvocationByLawfulPublicServant(Z)": "Z, a police officer executing a valid arrest warrant issued by a judicial magistrate, lawfully placed A under arrest"
+          },
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "DeprivedOfSelfControl(A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-010",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(Z, A)",
+            "DeprivedOfSelfControl(A)",
+            "WithoutPremeditation(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A attempted to pull Z's nose",
+            "Person(Z)": "Z, exercising her lawful statutory right of private defence",
+            "CausesDeath(A, Z)": "stabbed Z to death",
+            "IntentionToCauseDeath(A, Z)": "stabbed Z to death",
+            "GraveAndSuddenProvocation(Z, A)": "Z, exercising her lawful statutory right of private defence, seized A's wrist",
+            "DeprivedOfSelfControl(A)": "A became enraged that Z resisted",
+            "WithoutPremeditation(A)": "A became enraged that Z resisted, drew a knife, and stabbed Z to death"
+          },
+          "precision": 0.857,
+          "recall": 0.857,
+          "f1": 0.857,
+          "missed": [
+            "ProvocationByLawfulPrivateDefence(Z)"
+          ],
+          "extra": [
+            "WithoutPremeditation(A)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-011",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)",
+            "TookUndueAdvantageOrActedCruelly(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "unarmed patrons A and B",
+            "Person(B)": "unarmed patrons A and B",
+            "CausesDeath(A, B)": "A drew a heavy iron wrench and repeatedly struck B on the skull in a cruel and unusual manner, killing B",
+            "IntentionToCauseDeath(A, B)": "A drew a heavy iron wrench and repeatedly struck B on the skull in a cruel and unusual manner, killing B",
+            "TookUndueAdvantageOrActedCruelly(A)": "A drew a heavy iron wrench and repeatedly struck B on the skull in a cruel and unusual manner",
+            "SuddenFightUponSuddenQuarrel(A, B)": "A sudden fistfight broke out between unarmed patrons A and B at a restaurant"
+          },
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "WithoutPremeditation(A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-012",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A vehicle operated by A",
+            "Person(B)": "pedestrian B",
+            "CausesDeath(A, B)": "A caused B's death"
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-013",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "VictimConsentsToRiskOfDeath(Z)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A claims the benefit of Exception 5.",
+            "Person(Z)": "A aided Z in jumping into a turbulent canal.",
+            "CausesDeath(A, Z)": "A aided Z in jumping into a turbulent canal as part of a mutual pact where Z willingly consented to suffer death.",
+            "VictimConsentsToRiskOfDeath(Z)": "Z willingly consented to suffer death."
+          },
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.889,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-014",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A exhibited a counterfeit sample of merchandise",
+            "Person(B)": "prospective buyer B",
+            "Deceives(A, B)": "A exhibited a counterfeit sample of merchandise to prospective buyer B and made false statements"
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-015",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A aimed and deliberately fired at B",
+            "Person(B)": "A aimed and deliberately fired at B",
+            "CausesDeath(A, B)": "A aimed and deliberately fired at B",
+            "IntentionToCauseDeath(A, B)": "A aimed and deliberately fired at B with intent to kill"
+          },
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.889,
+          "missed": [
+            "~IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "CONFLICTING",
+          "end_to_end_correct": false,
+          "unsafe_supported": true
+        },
+        {
+          "scenario_id": "SCEN-BNS-016",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "rejected": [
+            {
+              "fact": "~WithoutPremeditation(A)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~SuddenFightUponSuddenQuarrel(A, B)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            }
+          ],
+          "evidence": {
+            "Person(A)": "A claimed he killed B",
+            "Person(B)": "A claimed he killed B",
+            "CausesDeath(A, B)": "A claimed he killed B",
+            "IntentionToCauseDeath(A, B)": "A had pre-planned the murder 3 days earlier, bought the weapon, and ambushed B in waiting"
+          },
+          "precision": 1.0,
+          "recall": 0.667,
+          "f1": 0.8,
+          "missed": [
+            "SuddenFightUponSuddenQuarrel(A, B)",
+            "~WithoutPremeditation(A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-017",
+          "extracted": [
+            "Person(B)",
+            "Person(A)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Deceives(A, B)": "A deceived B regarding a corporate merger",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)": "fraudulently induced B to sign and deliver the registered title deeds and share certificates of an estate valued at ₹5 crore",
+            "Person(A)": "(declared actor)",
+            "Person(B)": "(declared actor)"
+          },
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, ShareCertificates)",
+            "InducesDeliveryOfPropertyOrValuableSecurity(A, B, ShareCertificates)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-018",
+          "extracted": [
+            "Person(B)",
+            "Person(A)",
+            "GroupOfPersons(G)",
+            "MemberOfGroup(A, G)",
+            "CausesDeath(A, B)",
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "GroupOfPersons(G)": "A mob of six persons (G)",
+            "MemberOfGroup(A, G)": "including active participant A",
+            "CausesDeath(A, B)": "cornered and beat B to death",
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)": "acting in concert, cornered and beat B to death solely on the ground of B's religious community",
+            "Person(A)": "(declared actor)",
+            "Person(B)": "(declared actor)"
+          },
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1": 0.545,
+          "missed": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, Religion)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)",
+            "Person(A)",
+            "Person(B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-019",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "DishonestlyConcealsFact(A, Z, PriorSaleToB)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A sold an estate",
+            "Person(Z)": "A mortgaged the same property to Z",
+            "DishonestlyConcealsFact(A, Z, PriorSaleToB)": "without disclosing the prior sale to B, dishonestly concealing the encumbrance",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)": "receiving ₹50 lakh"
+          },
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Money50Lakh)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-020",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "BreachOfContract(A, Z)"
+          ],
+          "rejected": [
+            {
+              "fact": "~FraudulentlyOrDishonestlyInducesDelivery(A, Z, Advance)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            }
+          ],
+          "evidence": {
+            "Person(A)": "A contracted with Z",
+            "Person(Z)": "A contracted with Z",
+            "BreachOfContract(A, Z)": "A failed to deliver the goods"
+          },
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "missed": [
+            "~Deceives(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        }
+      ]
+    },
+    "loop": {
+      "mode": "loop",
+      "scenarios": 20,
+      "mean_precision": 0.828,
+      "mean_recall": 0.821,
+      "mean_f1": 0.812,
+      "end_to_end_correct": 13,
+      "end_to_end_accuracy_pct": 65.0,
+      "unsafe_supported": 2,
+      "rejected_proposals": 8,
+      "llm_calls": 33,
+      "records": [
+        {
+          "scenario_id": "SCEN-BNS-001",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)",
+            "WithoutLawfulExcuse(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A purchased potassium cyanide",
+            "Person(B)": "B's morning drink",
+            "CausesDeath(A, B)": "B drank the mixture and died within minutes as a direct consequence of the poison",
+            "IntentionToCauseDeath(A, B)": "surreptitiously mixed it into B's morning drink with the direct intention of causing B's death",
+            "WithoutLawfulExcuse(A)": "No defensive violence, provocation, or excuse existed"
+          },
+          "precision": 0.8,
+          "recall": 0.667,
+          "f1": 0.727,
+          "missed": [
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~GraveAndSuddenProvocation(B, A)"
+          ],
+          "extra": [
+            "WithoutLawfulExcuse(A)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-002",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "KnowsInjuryLikelyToCauseDeath(A, B)",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A knew that B suffered",
+            "Person(B)": "A knew that B suffered",
+            "CausesDeath(A, B)": "B died of splenic rupture",
+            "IntentionToCauseBodilyInjury(A, B)": "A intentionally struck B in the abdomen with a wooden staff intending to inflict bodily harm",
+            "KnowsInjuryLikelyToCauseDeath(A, B)": "A knew that B suffered from a severely diseased and enlarged spleen such that any blunt trauma to B's abdomen was likely to rupture the spleen and cause death",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)": "any blunt trauma to B's abdomen was likely to rupture the spleen and cause death"
+          },
+          "precision": 0.833,
+          "recall": 0.714,
+          "f1": 0.769,
+          "missed": [
+            "~ExceedsPrivateDefenceInGoodFaith(A)",
+            "~GraveAndSuddenProvocation(B, A)"
+          ],
+          "extra": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-003",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash50000)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A falsely represented himself",
+            "Person(B)": "deceived B into believing",
+            "Deceives(A, B)": "intentionally deceived B into believing",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash50000)": "B handed over ₹50,000 in cash to A, which A pocketed for personal use",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)": "intentionally deceived B into believing that B owed overdue property tax fines"
+          },
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Money50000)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, Cash50000)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-004",
+          "extracted": [
+            "Person(X)",
+            "Person(Y)",
+            "CausesDeath(X, Y)",
+            "IntentionToCauseBodilyInjury(X, Y)",
+            "GraveAndSuddenProvocation(Y, X)",
+            "DeprivedOfSelfControl(X)",
+            "~ProvocationVoluntarilySought(X)",
+            "~ProvocationByLawfulPublicServant(Y)",
+            "~ProvocationByLawfulPrivateDefence(Y)",
+            "WithoutLawfulExcuse(X)",
+            "ImminentlyDangerousAct(X)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(X)": "X picked up a heavy tool and struck Y",
+            "Person(Y)": "Y unexpectedly hurled grave insults",
+            "CausesDeath(X, Y)": "X picked up a heavy tool and struck Y, causing fatal injuries",
+            "IntentionToCauseBodilyInjury(X, Y)": "X picked up a heavy tool and struck Y",
+            "GraveAndSuddenProvocation(Y, X)": "Y unexpectedly hurled grave insults, spat in X's face, and violently assaulted X's young child without prior warning",
+            "DeprivedOfSelfControl(X)": "Deprived of self-control by this sudden passion",
+            "~ProvocationVoluntarilySought(X)": "The provocation was not sought by X",
+            "~ProvocationByLawfulPublicServant(Y)": "not done by a public servant",
+            "~ProvocationByLawfulPrivateDefence(Y)": "not done in private defence",
+            "WithoutLawfulExcuse(X)": "The provocation was not sought by X, not done by a public servant, and not done in private defence.",
+            "ImminentlyDangerousAct(X)": "X picked up a heavy tool and struck Y, causing fatal injuries."
+          },
+          "precision": 0.727,
+          "recall": 0.889,
+          "f1": 0.8,
+          "missed": [
+            "IntentionToCauseDeath(X, Y)"
+          ],
+          "extra": [
+            "ImminentlyDangerousAct(X)",
+            "IntentionToCauseBodilyInjury(X, Y)",
+            "WithoutLawfulExcuse(X)"
+          ],
+          "llm_calls": 3,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(X, Y)",
+                "KnowsInjuryLikelyToCauseDeath(X, Y)",
+                "BodilyInjurySufficientInOrdinaryCourse(X, Y)",
+                "ImminentlyDangerousAct(X)",
+                "KnowledgeOfProbabilityOfDeath(X)",
+                "WithoutLawfulExcuse(X)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a verbatim quote indicating X's intention to cause death."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a verbatim quote indicating X's knowledge that the injury was likely to cause death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a verbatim quote indicating the sufficiency of the injury in the ordinary course of nature to cause death."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(X)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a verbatim quote indicating that X's act was imminently dangerous."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(X)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a verbatim quote indicating X's knowledge of the probability of death."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(X)",
+                  "status": "TRUE",
+                  "evidence": "The provocation was not sought by X, not done by a public servant, and not done in private defence."
+                }
+              ],
+              "added": [
+                "WithoutLawfulExcuse(X)"
+              ]
+            },
+            {
+              "questions": [
+                "IntentionToCauseDeath(X, Y)",
+                "KnowsInjuryLikelyToCauseDeath(X, Y)",
+                "BodilyInjurySufficientInOrdinaryCourse(X, Y)",
+                "ImminentlyDangerousAct(X)",
+                "KnowledgeOfProbabilityOfDeath(X)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide a clear indication of X's intention to cause death."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not specify whether X knew the injury was likely to cause death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(X, Y)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on whether the injury was sufficient in the ordinary course of nature to cause death."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(X)",
+                  "status": "TRUE",
+                  "evidence": "X picked up a heavy tool and struck Y, causing fatal injuries."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(X)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not indicate whether X knew the act must in all probability cause death."
+                }
+              ],
+              "added": [
+                "ImminentlyDangerousAct(X)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-005",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "ExceedsPrivateDefenceInGoodFaith(A)",
+            "WithoutPremeditation(A)",
+            "WithoutIntentionOfMoreHarmThanNecessary(A)",
+            "~IntentionToCauseDeath(A, Z)",
+            "~WithoutLawfulExcuse(A)",
+            "~IntentionToCauseBodilyInjury(A, Z)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A defended himself with a pocket knife.",
+            "Person(Z)": "Z ambushed A with an iron club.",
+            "CausesDeath(A, Z)": "A struck Z fatally.",
+            "ExceedsPrivateDefenceInGoodFaith(A)": "exceeding the strict proportion of harm authorized by law, but without intention of doing more harm than he believed necessary for his defense.",
+            "WithoutPremeditation(A)": "acting without premeditation",
+            "WithoutIntentionOfMoreHarmThanNecessary(A)": "without intention of doing more harm than he believed necessary for his defense.",
+            "~IntentionToCauseDeath(A, Z)": "A struck Z fatally, exceeding the strict proportion of harm authorized by law, but without intention of doing more harm than he believed necessary for his defense.",
+            "~WithoutLawfulExcuse(A)": "Believing in good faith that his life was in imminent danger and acting without premeditation, A defended himself.",
+            "~IntentionToCauseBodilyInjury(A, Z)": "A defended himself with a pocket knife... without intention of doing more harm than he believed necessary for his defense."
+          },
+          "precision": 0.667,
+          "recall": 0.857,
+          "f1": 0.75,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [
+            "~IntentionToCauseBodilyInjury(A, Z)",
+            "~IntentionToCauseDeath(A, Z)",
+            "~WithoutLawfulExcuse(A)"
+          ],
+          "llm_calls": 3,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, Z)",
+                "IntentionToCauseBodilyInjury(A, Z)",
+                "KnowsInjuryLikelyToCauseDeath(A, Z)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, Z)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, Z)",
+                  "status": "FALSE",
+                  "evidence": "A struck Z fatally, exceeding the strict proportion of harm authorized by law, but without intention of doing more harm than he believed necessary for his defense."
+                },
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information about A's intention to cause bodily injury."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information about A's knowledge of the likelihood of causing death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information about the sufficiency of the injury in the ordinary course of nature to cause death."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information about whether A's act was imminently dangerous."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information about A's knowledge of the probability of causing death."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "FALSE",
+                  "evidence": "Believing in good faith that his life was in imminent danger and acting without premeditation, A defended himself."
+                }
+              ],
+              "added": [
+                "~IntentionToCauseDeath(A, Z)",
+                "~WithoutLawfulExcuse(A)"
+              ]
+            },
+            {
+              "questions": [
+                "IntentionToCauseBodilyInjury(A, Z)",
+                "KnowsInjuryLikelyToCauseDeath(A, Z)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, Z)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, Z)",
+                  "status": "FALSE",
+                  "evidence": "A defended himself with a pocket knife... without intention of doing more harm than he believed necessary for his defense."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario is silent on A's knowledge about the likelihood of causing death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on whether the injury was sufficient in the ordinary course of nature to cause death."
+                }
+              ],
+              "added": [
+                "~IntentionToCauseBodilyInjury(A, Z)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "CONTRADICTED",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-006",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "WithoutPremeditation(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)",
+            "~TookUndueAdvantageOrActedCruelly(A)",
+            "~IntentionToCauseDeath(A, B)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A sudden verbal dispute erupted between A and B",
+            "Person(B)": "A sudden verbal dispute erupted between A and B",
+            "CausesDeath(A, B)": "A struck B with a stone, causing fatal head injury",
+            "WithoutPremeditation(A)": "without prior premeditation",
+            "SuddenFightUponSuddenQuarrel(A, B)": "Both men began fighting in the heat of passion upon a sudden quarrel",
+            "~TookUndueAdvantageOrActedCruelly(A)": "A did not take undue advantage or act in a cruel or unusual manner",
+            "~IntentionToCauseDeath(A, B)": "A did not take undue advantage or act in a cruel or unusual manner.",
+            "IntentionToCauseBodilyInjury(A, B)": "A struck B with a stone, causing fatal head injury.",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)": "A struck B with a stone, causing fatal head injury."
+          },
+          "precision": 0.889,
+          "recall": 1.0,
+          "f1": 0.941,
+          "missed": [],
+          "extra": [
+            "~IntentionToCauseDeath(A, B)"
+          ],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, B)",
+                "IntentionToCauseBodilyInjury(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, B)",
+                  "status": "FALSE",
+                  "evidence": "A did not take undue advantage or act in a cruel or unusual manner."
+                },
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A struck B with a stone, causing fatal head injury."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario is silent on A's knowledge of the likelihood of causing death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A struck B with a stone, causing fatal head injury."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not specify if the act was imminently dangerous."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario is silent on A's knowledge of the probability of causing death."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on whether A had a lawful excuse."
+                }
+              ],
+              "added": [
+                "~IntentionToCauseDeath(A, B)",
+                "IntentionToCauseBodilyInjury(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "MITIGATED_DEFENCE_APPLIED",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-007",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "VictimAboveAge18(B)",
+            "VictimConsentsToRiskOfDeath(B)",
+            "IntentionToCauseDeath(A, B)",
+            "KnowsInjuryLikelyToCauseDeath(A, B)",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+            "ImminentlyDangerousAct(A)",
+            "KnowledgeOfProbabilityOfDeath(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A administered the fatal dose requested by B.",
+            "Person(B)": "B, a competent adult aged 28 suffering from incurable agony",
+            "CausesDeath(A, B)": "A administered the fatal dose requested by B.",
+            "VictimAboveAge18(B)": "B, a competent adult aged 28",
+            "VictimConsentsToRiskOfDeath(B)": "B took the risk of death with his own informed consent.",
+            "IntentionToCauseDeath(A, B)": "B entered into an explicit pact with A begging A to end his life.",
+            "KnowsInjuryLikelyToCauseDeath(A, B)": "A administered the fatal dose requested by B.",
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)": "A administered the fatal dose requested by B.",
+            "ImminentlyDangerousAct(A)": "A administered the fatal dose requested by B.",
+            "KnowledgeOfProbabilityOfDeath(A)": "A administered the fatal dose requested by B."
+          },
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.75,
+          "missed": [],
+          "extra": [
+            "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+            "ImminentlyDangerousAct(A)",
+            "KnowledgeOfProbabilityOfDeath(A)",
+            "KnowsInjuryLikelyToCauseDeath(A, B)"
+          ],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, B)",
+                "IntentionToCauseBodilyInjury(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, B)",
+                  "status": "TRUE",
+                  "evidence": "B entered into an explicit pact with A begging A to end his life."
+                },
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information about A's intention to cause bodily injury."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A administered the fatal dose requested by B."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A administered the fatal dose requested by B."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(A)",
+                  "status": "TRUE",
+                  "evidence": "A administered the fatal dose requested by B."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "TRUE",
+                  "evidence": "A administered the fatal dose requested by B."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information about the legality of A's actions."
+                }
+              ],
+              "added": [
+                "IntentionToCauseDeath(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "MITIGATED_DEFENCE_APPLIED",
+          "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-008",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(A, Z)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationVoluntarilySought(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A nurtured a long-standing desire to kill Z.",
+            "Person(Z)": "A nurtured a long-standing desire to kill Z.",
+            "CausesDeath(A, Z)": "A immediately drew a concealed pistol and shot Z dead.",
+            "IntentionToCauseDeath(A, Z)": "A nurtured a long-standing desire to kill Z.",
+            "GraveAndSuddenProvocation(A, Z)": "A went to Z's residence and deliberately hurled vulgar insults to provoke Z into striking him.",
+            "DeprivedOfSelfControl(A)": "claiming sudden provocation.",
+            "ProvocationVoluntarilySought(A)": "A went to Z's residence and deliberately hurled vulgar insults to provoke Z into striking him."
+          },
+          "precision": 0.857,
+          "recall": 0.857,
+          "f1": 0.857,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)"
+          ],
+          "extra": [
+            "GraveAndSuddenProvocation(A, Z)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-009",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "ProvocationByLawfulPublicServant(Z)",
+            "DeprivedOfSelfControl(A)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A became enraged by the arrest",
+            "Person(Z)": "Z, a police officer",
+            "CausesDeath(A, Z)": "struck Officer Z with a lethal weapon, killing him",
+            "IntentionToCauseDeath(A, Z)": "struck Officer Z with a lethal weapon, killing him",
+            "ProvocationByLawfulPublicServant(Z)": "Z, a police officer executing a valid arrest warrant issued by a judicial magistrate, lawfully placed A under arrest",
+            "DeprivedOfSelfControl(A)": "A became enraged by the arrest, claimed his dignity was violated"
+          },
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "GraveAndSuddenProvocation(Z, A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-010",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "IntentionToCauseDeath(A, Z)",
+            "GraveAndSuddenProvocation(Z, A)",
+            "DeprivedOfSelfControl(A)",
+            "ProvocationByLawfulPrivateDefence(Z)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A attempted to pull Z's nose",
+            "Person(Z)": "Z, exercising her lawful statutory right of private defence",
+            "CausesDeath(A, Z)": "stabbed Z to death",
+            "IntentionToCauseDeath(A, Z)": "drew a knife, and stabbed Z to death",
+            "GraveAndSuddenProvocation(Z, A)": "Z, exercising her lawful statutory right of private defence, seized A's wrist",
+            "DeprivedOfSelfControl(A)": "A became enraged that Z resisted",
+            "ProvocationByLawfulPrivateDefence(Z)": "Z, exercising her lawful statutory right of private defence"
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-011",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)",
+            "TookUndueAdvantageOrActedCruelly(A)",
+            "SuddenFightUponSuddenQuarrel(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "unarmed patrons A and B",
+            "Person(B)": "unarmed patrons A and B",
+            "CausesDeath(A, B)": "A drew a heavy iron wrench and repeatedly struck B on the skull in a cruel and unusual manner, killing B",
+            "IntentionToCauseDeath(A, B)": "A drew a heavy iron wrench and repeatedly struck B on the skull",
+            "TookUndueAdvantageOrActedCruelly(A)": "A drew a heavy iron wrench and repeatedly struck B on the skull in a cruel and unusual manner",
+            "SuddenFightUponSuddenQuarrel(A, B)": "A sudden fistfight broke out between unarmed patrons A and B"
+          },
+          "precision": 1.0,
+          "recall": 0.857,
+          "f1": 0.923,
+          "missed": [
+            "WithoutPremeditation(A)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-012",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A vehicle operated by A",
+            "Person(B)": "pedestrian B",
+            "CausesDeath(A, B)": "A caused B's death"
+          },
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "missed": [],
+          "extra": [],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, B)",
+                "IntentionToCauseBodilyInjury(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A intended to cause death"
+                },
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A intended bodily injury"
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A was reckless"
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A intended bodily injury"
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A was reckless"
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A was reckless"
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "investigative findings are completely silent on whether A suffered brake failure"
+                }
+              ],
+              "added": []
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-013",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "CausesDeath(A, Z)",
+            "VictimConsentsToRiskOfDeath(Z)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A claims the benefit of Exception 5.",
+            "Person(Z)": "A aided Z in jumping into a turbulent canal.",
+            "CausesDeath(A, Z)": "A aided Z in jumping into a turbulent canal.",
+            "VictimConsentsToRiskOfDeath(Z)": "Z willingly consented to suffer death."
+          },
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.889,
+          "missed": [
+            "IntentionToCauseDeath(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "VictimAboveAge18(Z)"
+              ],
+              "answers": [
+                {
+                  "atom": "VictimAboveAge18(Z)",
+                  "status": "UNKNOWN",
+                  "evidence": "Z's age remains unknown."
+                }
+              ],
+              "added": []
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-014",
+          "extracted": [
+            "Person(B)",
+            "Person(A)",
+            "Deceives(A, B)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Deceives(A, B)": "A exhibited a counterfeit sample of merchandise to prospective buyer B and made false statements.",
+            "Person(A)": "(declared actor)",
+            "Person(B)": "(declared actor)",
+            "IntentionallyInducesHarmfulActOrOmission(A, B)": "A exhibited a counterfeit sample of merchandise to prospective buyer B and made false statements."
+          },
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.857,
+          "missed": [],
+          "extra": [
+            "IntentionallyInducesHarmfulActOrOmission(A, B)"
+          ],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "FraudulentlyOrDishonestlyInducesDelivery(A, B, ?p)",
+                "IntentionallyInducesHarmfulActOrOmission(A, B)"
+              ],
+              "answers": [
+                {
+                  "atom": "FraudulentlyOrDishonestlyInducesDelivery(A, B, ?p)",
+                  "status": "UNKNOWN",
+                  "evidence": "the police report contains no record indicating whether B actually delivered any money or whether any transaction took place."
+                },
+                {
+                  "atom": "IntentionallyInducesHarmfulActOrOmission(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A exhibited a counterfeit sample of merchandise to prospective buyer B and made false statements."
+                }
+              ],
+              "added": [
+                "IntentionallyInducesHarmfulActOrOmission(A, B)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "INSUFFICIENT_INFORMATION",
+          "end_to_end_correct": false,
+          "unsafe_supported": true
+        },
+        {
+          "scenario_id": "SCEN-BNS-015",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A aimed and deliberately fired at B",
+            "Person(B)": "A aimed and deliberately fired at B",
+            "CausesDeath(A, B)": "A aimed and deliberately fired at B with intent to kill",
+            "IntentionToCauseDeath(A, B)": "A aimed and deliberately fired at B with intent to kill"
+          },
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.889,
+          "missed": [
+            "~IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "CONFLICTING",
+          "end_to_end_correct": false,
+          "unsafe_supported": true
+        },
+        {
+          "scenario_id": "SCEN-BNS-016",
+          "extracted": [
+            "Person(A)",
+            "Person(B)",
+            "CausesDeath(A, B)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "rejected": [
+            {
+              "fact": "~WithoutPremeditation(A)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~SuddenFightUponSuddenQuarrel(A, B)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~SuddenFightUponSuddenQuarrel(A, B)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~WithoutPremeditation(A)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            }
+          ],
+          "evidence": {
+            "Person(A)": "A claimed he killed B",
+            "Person(B)": "A claimed he killed B",
+            "CausesDeath(A, B)": "A claimed he killed B",
+            "IntentionToCauseDeath(A, B)": "A had pre-planned the murder 3 days earlier, bought the weapon, and ambushed B in waiting"
+          },
+          "precision": 1.0,
+          "recall": 0.667,
+          "f1": 0.8,
+          "missed": [
+            "SuddenFightUponSuddenQuarrel(A, B)",
+            "~WithoutPremeditation(A)"
+          ],
+          "extra": [],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "SuddenFightUponSuddenQuarrel(A, B)",
+                "WithoutPremeditation(A)",
+                "TookUndueAdvantageOrActedCruelly(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "SuddenFightUponSuddenQuarrel(A, B)",
+                  "status": "FALSE",
+                  "evidence": "A claimed he killed B during an unexpected sudden quarrel. However, forensic mobile extractions prove that A had pre-planned the murder 3 days earlier, bought the weapon, and ambushed B in waiting."
+                },
+                {
+                  "atom": "WithoutPremeditation(A)",
+                  "status": "FALSE",
+                  "evidence": "Forensic mobile extractions prove that A had pre-planned the murder 3 days earlier, bought the weapon, and ambushed B in waiting."
+                },
+                {
+                  "atom": "TookUndueAdvantageOrActedCruelly(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide specific information on whether A took undue advantage or acted cruelly."
+                }
+              ],
+              "added": []
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-017",
+          "extracted": [
+            "Person(B)",
+            "Person(A)",
+            "Deceives(A, B)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Deceives(A, B)": "A deceived B regarding a corporate merger",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)": "fraudulently induced B to sign and deliver the registered title deeds and share certificates of an estate valued at ₹5 crore",
+            "Person(A)": "(declared actor)",
+            "Person(B)": "(declared actor)"
+          },
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1": 0.667,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, ShareCertificates)",
+            "InducesDeliveryOfPropertyOrValuableSecurity(A, B, ShareCertificates)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, B, RegisteredTitleDeedsAndShareCertificates)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-018",
+          "extracted": [
+            "Person(B)",
+            "Person(A)",
+            "GroupOfPersons(G)",
+            "MemberOfGroup(A, G)",
+            "CausesDeath(A, B)",
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "ImminentlyDangerousAct(A)",
+            "WithoutLawfulExcuse(A)"
+          ],
+          "rejected": [
+            {
+              "fact": "WithoutLawfulExcuse(A)",
+              "reason": "evidence not found in narrative: 'The act was committed solely on the ground of B's religious community.'"
+            }
+          ],
+          "evidence": {
+            "GroupOfPersons(G)": "A mob of six persons (G)",
+            "MemberOfGroup(A, G)": "including active participant A",
+            "CausesDeath(A, B)": "cornered and beat B to death",
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)": "acting in concert, cornered and beat B to death solely on the ground of B's religious community",
+            "Person(A)": "(declared actor)",
+            "Person(B)": "(declared actor)",
+            "IntentionToCauseBodilyInjury(A, B)": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death.",
+            "ImminentlyDangerousAct(A)": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death.",
+            "WithoutLawfulExcuse(A)": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death solely on the ground of B's religious community."
+          },
+          "precision": 0.333,
+          "recall": 0.6,
+          "f1": 0.429,
+          "missed": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, Religion)",
+            "IntentionToCauseDeath(A, B)"
+          ],
+          "extra": [
+            "ActingInConcertOnDiscriminatoryGround(G, B, ReligiousCommunity)",
+            "ImminentlyDangerousAct(A)",
+            "IntentionToCauseBodilyInjury(A, B)",
+            "Person(A)",
+            "Person(B)",
+            "WithoutLawfulExcuse(A)"
+          ],
+          "llm_calls": 3,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, B)",
+                "IntentionToCauseBodilyInjury(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "ImminentlyDangerousAct(A)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not explicitly state A's intention to cause death."
+                },
+                {
+                  "atom": "IntentionToCauseBodilyInjury(A, B)",
+                  "status": "TRUE",
+                  "evidence": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on A's knowledge about the likelihood of death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not specify whether the injury was sufficient in the ordinary course of nature to cause death."
+                },
+                {
+                  "atom": "ImminentlyDangerousAct(A)",
+                  "status": "TRUE",
+                  "evidence": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on A's knowledge of the probability of death."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "TRUE",
+                  "evidence": "The act was committed solely on the ground of B's religious community."
+                }
+              ],
+              "added": [
+                "IntentionToCauseBodilyInjury(A, B)",
+                "ImminentlyDangerousAct(A)"
+              ]
+            },
+            {
+              "questions": [
+                "IntentionToCauseDeath(A, B)",
+                "KnowsInjuryLikelyToCauseDeath(A, B)",
+                "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                "KnowledgeOfProbabilityOfDeath(A)",
+                "WithoutLawfulExcuse(A)"
+              ],
+              "answers": [
+                {
+                  "atom": "IntentionToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not explicitly state A's intention to cause death."
+                },
+                {
+                  "atom": "KnowsInjuryLikelyToCauseDeath(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not provide information on A's knowledge about the likelihood of causing death."
+                },
+                {
+                  "atom": "BodilyInjurySufficientInOrdinaryCourse(A, B)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not specify whether the injury was sufficient in the ordinary course of nature to cause death."
+                },
+                {
+                  "atom": "KnowledgeOfProbabilityOfDeath(A)",
+                  "status": "UNKNOWN",
+                  "evidence": "The scenario does not indicate A's knowledge of the probability of causing death."
+                },
+                {
+                  "atom": "WithoutLawfulExcuse(A)",
+                  "status": "TRUE",
+                  "evidence": "A mob of six persons (G), including active participant A, acting in concert, cornered and beat B to death solely on the ground of B's religious community."
+                }
+              ],
+              "added": [
+                "WithoutLawfulExcuse(A)"
+              ]
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-019",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "DishonestlyConcealsFact(A, Z, PriorSaleToB)",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)"
+          ],
+          "rejected": [],
+          "evidence": {
+            "Person(A)": "A sold an estate",
+            "Person(Z)": "A mortgaged the same property to Z",
+            "DishonestlyConcealsFact(A, Z, PriorSaleToB)": "without disclosing the prior sale to B, dishonestly concealing the encumbrance",
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)": "receiving ₹50 lakh"
+          },
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "missed": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Money50Lakh)"
+          ],
+          "extra": [
+            "FraudulentlyOrDishonestlyInducesDelivery(A, Z, 50Lakh)"
+          ],
+          "llm_calls": 1,
+          "clarification_rounds": [],
+          "verdict_from_extracted_facts": "SUPPORTED",
+          "ground_truth": "SUPPORTED",
+          "end_to_end_correct": true,
+          "unsafe_supported": false
+        },
+        {
+          "scenario_id": "SCEN-BNS-020",
+          "extracted": [
+            "Person(A)",
+            "Person(Z)",
+            "BreachOfContract(A, Z)"
+          ],
+          "rejected": [
+            {
+              "fact": "~Deceives(A, Z)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~FraudulentlyOrDishonestlyInducesDelivery(A, Z, Cotton)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            },
+            {
+              "fact": "~IntentionallyInducesHarmfulActOrOmission(A, Z)",
+              "reason": "negated fact, but the evidence quote contains no negation"
+            }
+          ],
+          "evidence": {
+            "Person(A)": "A contracted with Z",
+            "Person(Z)": "A contracted with Z",
+            "BreachOfContract(A, Z)": "A failed to deliver the goods"
+          },
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.857,
+          "missed": [
+            "~Deceives(A, Z)"
+          ],
+          "extra": [],
+          "llm_calls": 2,
+          "clarification_rounds": [
+            {
+              "questions": [
+                "Deceives(A, Z)",
+                "FraudulentlyOrDishonestlyInducesDelivery(A, Z, ?p)",
+                "IntentionallyInducesHarmfulActOrOmission(A, Z)"
+              ],
+              "answers": [
+                {
+                  "atom": "Deceives(A, Z)",
+                  "status": "FALSE",
+                  "evidence": "At the time of receiving the money, A genuinely intended to perform the contract."
+                },
+                {
+                  "atom": "FraudulentlyOrDishonestlyInducesDelivery(A, Z, Cotton)",
+                  "status": "FALSE",
+                  "evidence": "At the time of receiving the money, A genuinely intended to perform the contract."
+                },
+                {
+                  "atom": "IntentionallyInducesHarmfulActOrOmission(A, Z)",
+                  "status": "FALSE",
+                  "evidence": "At the time of receiving the money, A genuinely intended to perform the contract."
+                }
+              ],
+              "added": []
+            }
+          ],
+          "verdict_from_extracted_facts": "INSUFFICIENT_INFORMATION",
+          "ground_truth": "CONTRADICTED",
+          "end_to_end_correct": false,
+          "unsafe_supported": false
+        }
+      ]
+    }
+  }
+}

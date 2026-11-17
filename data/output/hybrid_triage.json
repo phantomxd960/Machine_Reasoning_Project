@@ -1,0 +1,453 @@
+[
+  {
+    "model": "gpt-4o-mini",
+    "pipeline_mode": "loop",
+    "scenarios": 20,
+    "pipeline_correct": 15,
+    "llm_correct": 16,
+    "auto_accepted": 11,
+    "coverage_pct": 55.0,
+    "auto_correct": 11,
+    "auto_accuracy_pct": 100.0,
+    "unsafe_auto_accepted": 0,
+    "unsafe_routed_to_review": 0,
+    "human_review": [
+      "SCEN-BNS-004",
+      "SCEN-BNS-005",
+      "SCEN-BNS-006",
+      "SCEN-BNS-008",
+      "SCEN-BNS-009",
+      "SCEN-BNS-010",
+      "SCEN-BNS-015",
+      "SCEN-BNS-019",
+      "SCEN-BNS-020"
+    ],
+    "rows": [
+      {
+        "scenario_id": "SCEN-BNS-001",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-002",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-003",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-004",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-005",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "CONTRADICTED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-006",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-007",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-008",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-009",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-010",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-011",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-012",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-013",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-014",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-015",
+        "ground_truth": "CONFLICTING",
+        "pipeline_verdict": "CONFLICTING",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-016",
+        "ground_truth": "CONTRADICTED",
+        "pipeline_verdict": "CONTRADICTED",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-017",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-018",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-019",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "SUPPORTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-020",
+        "ground_truth": "CONTRADICTED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      }
+    ]
+  },
+  {
+    "model": "gpt-4o",
+    "pipeline_mode": "loop",
+    "scenarios": 20,
+    "pipeline_correct": 13,
+    "llm_correct": 18,
+    "auto_accepted": 12,
+    "coverage_pct": 60.0,
+    "auto_correct": 12,
+    "auto_accuracy_pct": 100.0,
+    "unsafe_auto_accepted": 0,
+    "unsafe_routed_to_review": 3,
+    "human_review": [
+      "SCEN-BNS-004",
+      "SCEN-BNS-005",
+      "SCEN-BNS-007",
+      "SCEN-BNS-014",
+      "SCEN-BNS-015",
+      "SCEN-BNS-016",
+      "SCEN-BNS-018",
+      "SCEN-BNS-020"
+    ],
+    "rows": [
+      {
+        "scenario_id": "SCEN-BNS-001",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-002",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-003",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-004",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-005",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "CONTRADICTED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-006",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "llm_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-007",
+        "ground_truth": "MITIGATED_DEFENCE_APPLIED",
+        "pipeline_verdict": "MITIGATED_DEFENCE_APPLIED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": true
+      },
+      {
+        "scenario_id": "SCEN-BNS-008",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-009",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-010",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-011",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-012",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-013",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-014",
+        "ground_truth": "INSUFFICIENT_INFORMATION",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "INSUFFICIENT_INFORMATION",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": true,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-015",
+        "ground_truth": "CONFLICTING",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": true,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-016",
+        "ground_truth": "CONTRADICTED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-017",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-018",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "SUPPORTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-019",
+        "ground_truth": "SUPPORTED",
+        "pipeline_verdict": "SUPPORTED",
+        "llm_verdict": "SUPPORTED",
+        "decision": "AUTO_ACCEPT",
+        "auto_verdict_correct": true,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      },
+      {
+        "scenario_id": "SCEN-BNS-020",
+        "ground_truth": "CONTRADICTED",
+        "pipeline_verdict": "INSUFFICIENT_INFORMATION",
+        "llm_verdict": "CONTRADICTED",
+        "decision": "HUMAN_REVIEW",
+        "auto_verdict_correct": null,
+        "pipeline_unsafe": false,
+        "llm_unsafe": false
+      }
+    ]
+  }
+]
